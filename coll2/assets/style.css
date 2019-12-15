@@ -6,7 +6,189 @@
   height: 1080px;
   z-index: 79;
 }*/
-.it {
-font-family: AGaramondPro-Italic;
-background-color: crimson;
+/*
+font-family: 'EB Garamond', serif;
+font-family: 'Rosario', sans-serif;
+*/
+
+*,
+*::after
+*::before {
+box-sizing: border-box;
+}
+
+body {
+margin: 0px;
+padding: 0px;
+height: 95vh;
+min-width: 640px;
+}
+
+.navNatureLine {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+width: 96%;
+height: 90%;
+padding-left: 59px;
+padding-right: 60px;
+padding-top: 47px;
+padding-bottom: 60px;
+z-index: 100;
+font-family: 'EB Garamond', serif;
+color: black;
+}
+
+.collectNav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.collectNav div a, #seeAll {
+font-size: 17pt;
+color: #999999;
+letter-spacing: .03em;
+transition: color .5s linear;
+}
+
+.collectNav div a:hover, #seeAll:hover {
+color: black;
+}
+
+.caption {
+display: inline-block;
+position: absolute;
+top: 30px;
+left: 50%;
+margin-right: -50%;
+transform: translateX(-50%);
+}
+
+.caption p {
+font-size: 17pt;
+font-weight: 500;
+margin: 0;
+text-align: center;
+}
+
+.asideLinks {
+transform: rotate(-90deg);
+position:  absolute;
+bottom: 37%;
+left: -100px;
+}
+
+.asideLinks a {
+color: black;
+font-size: 10pt;
+font-weight: bold;
+letter-spacing: -0.04em;
+display: inline-block;
+margin-bottom: 0;
+margin-left: 0;
+margin-right: 40px;
+margin-top: 0;
+}
+
+
+
+.authorDate p {
+display: inline-block;
+font-size: 9pt;
+font-weight: bold;
+margin-right: 20px;
+}
+
+.decorLine3 {
+display: inline-block;
+position: relative;
+margin-bottom: 0;
+width: 270px;
+border-top: 1px solid black;
+margin-right: 20px;
+}
+
+.decorLine2 {
+display: inline-block;
+position: relative;
+width: 155px;
+border-top: 1px solid black;
+}
+
+.decorLine1 {
+display: inline-block;
+position: relative;
+width: 72px;
+border-top: 1px solid #999999;
+height: 4px;
+}
+
+footer {
+display: block;
+position: absolute;
+bottom: 0;
+left: 120px;
+}
+
+footer div, footer a {
+display: inline;
+}
+
+.authorDate.author {
+position: relative;
+margin: 0;
+margin-right: 173px;
+}
+
+footer p {
+  display: inline-block;
+  font-family: url("assets/AGaramondPro-Regular.otf");
+  font-size: 18pt;
+  font-weight: 550;
+}
+
+
+
+.date {
+font-size: 10pt;
+font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+@font-face {
+    font-family: 'AGaramondPro';
+    font-style: normal;
+    src: url('assets/AGaramondPro-Regular.otf'); /* Путь к файлу со шрифтом */
+}
+/*
+@font-face {
+    font-family: 'AGaramondPro-Italic';
+    font-style: italic;
+    src: url('assets/AGaramondPro-Italic.otf'); /* Путь к файлу со шрифтом */
 }
