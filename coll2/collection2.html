@@ -11,6 +11,8 @@
   <title>coll№2</title>
 </head>
 <body>
+
+  <!-- Постоянные статичные элементы, расположенные рамкой-->
   <div class="navNatureLine">
     <header>
       <nav class="collectNav">
@@ -45,6 +47,39 @@
       <!--Вот здесь ссылку на главную подставить-->
       <a id="seeAll" href="#">see all</a>
     </footer>
+  </div>
+
+  <!-- Кнопки 01-04 для переключения страниц-слайдов -->
+  <!--div id="navPagination"-->
+    <!-- кнопки выбора слайдов -->
+
+    <!-- При загрузке страницы выбран первый слайд -->
+    <input id="shadow-slide1" name="shadow-slide" type="radio" checked="checked"/>
+    <label class="button SlideKey1" for="shadow-slide1">01</label>
+
+    <input id="shadow-slide2" name="shadow-slide" type="radio" />
+    <label class="button SlideKey2" for="shadow-slide2">02</label>
+
+    <input id="shadow-slide3" name="shadow-slide" type="radio" />
+    <label class="button SlideKey3" for="shadow-slide3">03</label>
+
+    <input id="shadow-slide4" name="shadow-slide" type="radio" />
+    <label class="button SlideKey4" for="shadow-slide4">04</label>
+  <!--/div-->
+
+  <!-- Четыре страницы-слайда -->
+  <div id="slider">
+    <div class="elements">
+
+        <div class="element SlideBox1"> СЛАЙД 1 </div>
+
+        <div class="element SlideBox2"> СЛАЙД 2 </div>
+
+        <div class="element SlideBox3"> СЛАЙД 3 </div>
+
+        <div class="element SlideBox4"> СЛАЙД 4 </div>
+
+    </div>
   </div>
 </body>
 </html>
