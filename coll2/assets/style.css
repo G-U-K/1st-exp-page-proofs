@@ -224,6 +224,7 @@ display: block;
 
 #slider .element {
 display: none;
+transition-delay: 2s;
 }
 
 
