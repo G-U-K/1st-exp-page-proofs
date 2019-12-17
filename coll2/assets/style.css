@@ -33,7 +33,7 @@ min-width: 640px;
 .navNatureLine {
 box-sizing: border-box;
 position: absolute;
-display: none;
+display: block;
 top: 0;
 left: 0;
 right: 0;
@@ -166,18 +166,45 @@ font-weight: bold;
 }
 
 
+/*       $pages$        */
+
+#pages {
+position: relative;
+box-sizing: border-box;
+padding-left: 59px;
+padding-right: 60px;
+padding-top: 47px;
+padding-bottom: 60px;
+width: 100%;
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-end;
+flex-wrap: wrap;
+flex-basis: 100%;
+/*
+align-content: center;
+flex-flow: column;
+fle
+justify-content: flex-start;*/
+}
+
 /*      navPagination     */
 
 /* -Украшательство- */
 
 #navPagination {
-
+position: absolute;
 }
 
 .button {
 font-family: 'EB Garamond', serif;
-display: block;
+font-size: 10pt;/*14pt;*/
 text-align: right;
+flex-grow: 0;
+cursor: pointer;
+z-index: 1000;
 /*
 background: #ccc;
 display: inline-block;
@@ -186,7 +213,6 @@ margin: 0 5px 15px 5px;
 line-height: 30px;
 height: 30px;
 width: 80px;
-cursor: pointer;
 */
 }
 
@@ -196,14 +222,27 @@ display: none;
 
 /* --кнопка выбрана-- */
 input[name^="shadow-"]:checked + .button {
-    background: #f8f;
+    font-size: 40pt;/*48pt;*/
+}
+
+#shadow-slide1:checked + .SlideKey1::after,
+#shadow-slide2:checked + .SlideKey2::before,
+#shadow-slide2:checked + .SlideKey2::after,
+#shadow-slide3:checked + .SlideKey3::before,
+#shadow-slide3:checked + .SlideKey3::after,
+#shadow-slide4:checked + .SlideKey4::before
+{
+  content: "";
+  display: block;
+  width: calc(100% - 10px);
+  height: 10vh;
+  margin: 3.6vh 0;
+  border-right: solid black 1px;/*
+  border-right-width: 1px;
+  border-right-color: black;
+  border-right-style: solid;*/
 }
 /* --//кнопка выбрана-- */
-
-.button {
-font-size: 14pt;
-font-family: 'EB Garamond', serif;
-}
 
 /* -//Украшательство- */
 
@@ -214,6 +253,7 @@ input[name^="shadow-"]:checked + .SlideKey2 ~ #slider .SlideBox2,
 input[name^="shadow-"]:checked + .SlideKey3 ~ #slider .SlideBox3,
 input[name^="shadow-"]:checked + .SlideKey4 ~ #slider .SlideBox4 {
 display: block;
+opacity: 1;
 }
 
 /* -//Функционал- */
@@ -222,16 +262,32 @@ display: block;
 
 /*    slider    */
 
+#slider {
+display: block;
+position: absolute;
+flex: none;
+top: 0;
+left: 0;
+}
+
 #slider .element {
+flex: none;
+position: absolute;
+/*DEEELEEEEEEEEEEETEEEEEEEEEEEEE*/
+top: 50vh;
+left: 50vw;
+/*-----------------------*/
 display: none;
-transition-delay: 2s;
+opacity: 0;
+transition: opacity 1s linear;
+transition-delay: display 3s;
 }
 
 
 /*    //slider    */
 
 
-
+/*       //$pages$        */
 
 
 
