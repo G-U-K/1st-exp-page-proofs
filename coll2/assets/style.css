@@ -114,7 +114,7 @@ margin-right: 20px;
 display: inline-block;
 position: relative;
 margin-bottom: 0;
-width: 270px;
+width: 14vw;
 border-top: 1px solid black;
 margin-right: 20px;
 }
@@ -122,7 +122,7 @@ margin-right: 20px;
 .decorLine2 {
 display: inline-block;
 position: relative;
-width: 155px;
+width: 14vh;
 border-top: 1px solid black;
 }
 
@@ -158,13 +158,20 @@ footer p {
   font-weight: 550;
 }
 
-
-
 .date {
 font-size: 10pt;
 font-weight: bold;
 }
 
+/*
+#seeAll {
+display: inline-block;
+position: absolute;
+top: 30px;
+left: 100%;
+margin-right: -50%;
+transform: translateX(-50%);
+}*/
 
 /*       $pages$        */
 
@@ -183,11 +190,6 @@ justify-content: center;
 align-items: flex-end;
 flex-wrap: wrap;
 flex-basis: 100%;
-/*
-align-content: center;
-flex-flow: column;
-fle
-justify-content: flex-start;*/
 }
 
 /*      navPagination     */
@@ -205,15 +207,6 @@ text-align: right;
 flex-grow: 0;
 cursor: pointer;
 z-index: 1000;
-/*
-background: #ccc;
-display: inline-block;
-text-align: center;
-margin: 0 5px 15px 5px;
-line-height: 30px;
-height: 30px;
-width: 80px;
-*/
 }
 
 input[name^="shadow-"] {
@@ -237,10 +230,7 @@ input[name^="shadow-"]:checked + .button {
   width: calc(100% - 10px);
   height: 10vh;
   margin: 3.6vh 0;
-  border-right: solid black 1px;/*
-  border-right-width: 1px;
-  border-right-color: black;
-  border-right-style: solid;*/
+  border-right: solid black 1px;
 }
 /* --//кнопка выбрана-- */
 
@@ -263,9 +253,28 @@ opacity: 1;
 /*    slider    */
 
 #slider {
+/*
+position: relative;
+box-sizing: border-box;
+padding-left: 59px;
+padding-right: 60px;
+padding-top: 47px;
+padding-bottom: 60px;
+width: 100%;
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-end;
+flex-wrap: wrap;
+flex-basis: 100%;
+*/
 display: block;
+margin: 0;
+padding: 0;
+width: 100%;
+height: 100%;
 position: absolute;
-flex: none;
 top: 0;
 left: 0;
 }
@@ -273,20 +282,101 @@ left: 0;
 #slider .element {
 flex: none;
 position: absolute;
-/*DEEELEEEEEEEEEEETEEEEEEEEEEEEE*/
-top: 50vh;
-left: 50vw;
-/*-----------------------*/
+width: 100%;
+height: 100%;
 display: none;
-opacity: 0;
-transition: opacity 1s linear;
-transition-delay: display 3s;
+z-index: 3;
 }
 
 
 /*    //slider    */
+/*   -SlideBox1-    */
 
+.SlideBox1 > .bg1,
+.SlideBox1 > .bg2 {
+display: inline-block;
+float: left;
+height: 100%;
+width: 50%;
+margin: 0;
+padding: 0;
+z-index: 1;
+}
 
+.SlideBox1 > .bg1 {
+background-color: #fff;
+}
+
+.SlideBox1 > .bg2 {
+background-color: rgb(236, 222, 222);
+}
+
+.SlideBox1 > .Nature_Line {
+display: block;
+font-size: 56pt; /*136pt in orig*/
+font-family: "Adobe Garamond Pro";
+position: absolute;
+margin: 0;
+left: calc(59px + 3% );
+bottom: 66.6%;
+}
+
+.SlideBox1 > .text {
+text-align: left;
+position: absolute;
+max-width: 35%;
+max-height: 54%;/*
+overflow-y: auto;
+overflow-x: visible;*/
+overflow: visible;
+width: 210px;
+right: 55%;
+bottom: calc(60px + 3.7% );
+z-index: 1020;
+}
+
+.SlideBox1 > .text > .decorLine1_1 {
+width: 128%;
+border-top: 1px solid black
+}
+
+.SlideBox1 > .text > article {
+font-size: 11pt;/*14pt in orig*/
+font-family: "Adobe Garamond Pro";
+z-index: 1030;
+}
+
+.SlideBox1 > .photo {
+display: flex;
+box-sizing: border-box;
+position: absolute;
+align-content: center;
+align-items: center;
+margin: 0;
+padding-top: 47px;
+padding-bottom: 60px;
+padding-left: 9.9%;
+max-width: 38%;
+top:0;
+left: 50%;
+height: 100%;
+z-index: 5;
+}
+img {
+align-self: center;
+max-width: 100%;
+}
+
+/*   //-SlideBox1-    */
+
+/*   -SlideBox2-    */
+/*   //-SlideBox2-    */
+
+/*   -SlideBox3-    */
+/*   //-SlideBox3-    */
+
+/*   -SlideBox4-    */
+/*   //-SlideBox4-    */
 /*       //$pages$        */
 
 
