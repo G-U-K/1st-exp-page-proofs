@@ -309,6 +309,11 @@ background-color: #fff;
 
 .SlideBox1 > .bg2 {
 background-color: rgb(236, 222, 222);
+background-image: url("imgs/01/Rectangle 3.png");
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: local;
+background-size: contain;
 }
 
 .SlideBox1 > .Nature_Line {
@@ -362,14 +367,82 @@ left: 50%;
 height: 100%;
 z-index: 5;
 }
-img {
+.SlideBox1 > .photo > img {
 align-self: center;
+}
+
+img {
 max-width: 100%;
 }
 
 /*   //-SlideBox1-    */
 
 /*   -SlideBox2-    */
+
+.SlideBox2 > .bg1,
+.SlideBox2 > .bg2 {
+display: inline-block;
+float: left;
+height: 100%;
+width: 50%;
+margin: 0;
+padding: 0;
+z-index: 1;
+}
+
+.SlideBox2 > .bg2 {
+background-color: #fff;
+}
+
+.SlideBox2 > .bg1 {
+background-color: rgb(229, 234, 235);/*
+background-image: url("imgs/02/Rectangle3.png");
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: local;
+background-size: contain;*/
+}
+
+.SlideBox2 > .photo {
+display: flex;
+box-sizing: border-box;
+position: absolute;
+align-content:  flex-start;
+align-items: flex-start;
+margin: 0;
+padding-top: 0;
+z-index: 5;
+top:0;
+height: 75%;
+padding-left: 6.9%;
+left: 59px;
+max-width: 32%;
+/*
+padding-bottom: 60px;
+*/
+}
+.SlideBox2 > .photo > img {
+display: block;
+padding-top: 76px;
+background-color: rgb(236, 222, 222);
+}
+
+.SlideBox2 > .ladder {
+display: block;
+font-size: 56pt; /*136pt in orig*/
+font-family: "Adobe Garamond Pro";
+position: absolute;
+margin: 0;
+text-align: center;
+z-index: 160;
+line-height: 1em;
+left: 50%;
+margin-right: -50%;
+transform: translateX(-58.6%);
+bottom: calc(60px + 8% );
+max-height: 57%;
+}
+
 /*   //-SlideBox2-    */
 
 /*   -SlideBox3-    */
