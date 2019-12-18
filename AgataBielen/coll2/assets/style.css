@@ -1,0 +1,693 @@
+/*.Coll_N°2 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 1920px;
+  height: 1080px;
+  z-index: 79;
+}*/
+/*
+font-family: 'EB Garamond', serif;
+font-family: 'Rosario', sans-serif;
+*/
+
+*,
+*::after
+*::before {
+box-sizing: border-box;
+}
+
+body {
+overflow: hidden;
+box-sizing: content-box;
+position: absolute;
+margin: 0px;
+padding: 0px;
+top:0;
+left: 0;
+right: 0;
+bottom: 0;
+min-height: 480px;
+min-width: 640px;
+}
+
+.navNatureLine {
+box-sizing: border-box;
+position: absolute;
+display: block;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+/*width: 96%;
+height: 90%;*/
+padding-left: 59px;
+padding-right: 60px;
+padding-top: 47px;
+padding-bottom: 60px;
+z-index: 100;
+font-family: 'EB Garamond', serif;
+color: black;
+}
+
+.collectNav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.collectNav div a, #seeAll {
+font-size: 17pt;
+color: #999999;
+letter-spacing: .03em;
+transition: color .5s linear;
+}
+
+#seeAll {
+margin-left: 10px
+}
+
+.collectNav div a:hover, #seeAll:hover {
+color: black;
+}
+
+.caption {
+display: inline-block;
+position: absolute;
+top: 30px;
+left: 50%;
+margin-right: -50%;
+transform: translateX(-50%);
+}
+
+.caption p {
+font-size: 17pt;
+font-weight: 500;
+margin: 0;
+text-align: center;
+}
+
+.asideLinks {
+transform: rotate(-90deg);
+position:  absolute;
+bottom: 37%;
+left: -100px;
+}
+
+.asideLinks a {
+color: black;
+font-size: 10pt;
+font-weight: bold;
+letter-spacing: -0.04em;
+display: inline-block;
+margin-bottom: 0;
+margin-left: 0;
+margin-right: 40px;
+margin-top: 0;
+}
+
+
+
+.authorDate p {
+display: inline-block;
+font-size: 9pt;
+font-weight: bold;
+margin-right: 20px;
+}
+
+.decorLine3 {
+display: inline-block;
+position: relative;
+margin-bottom: 0;
+width: 14vw;
+border-top: 1px solid black;
+margin-right: 20px;
+}
+
+.decorLine2 {
+display: inline-block;
+position: relative;
+width: 14vh;
+border-top: 1px solid black;
+}
+
+.decorLine1 {
+display: inline-block;
+position: relative;
+width: 72px;
+border-top: 1px solid #999999;
+height: 4px;
+}
+
+footer {
+display: block;
+position: absolute;
+bottom: 0;
+left: 120px;
+}
+
+footer div, footer a {
+display: inline;
+}
+
+.authorDate.author {
+position: relative;
+margin: 0;
+margin-right: 173px;
+}
+
+footer p {
+  display: inline-block;
+  font-family: url("assets/AGaramondPro-Regular.otf");
+  font-size: 18pt;
+  font-weight: 550;
+}
+
+.date {
+font-size: 10pt;
+font-weight: bold;
+}
+
+/*
+#seeAll {
+display: inline-block;
+position: absolute;
+top: 30px;
+left: 100%;
+margin-right: -50%;
+transform: translateX(-50%);
+}*/
+
+/*       $pages$        */
+
+#pages {
+position: relative;
+box-sizing: border-box;
+padding-left: 59px;
+padding-right: 60px;
+padding-top: 47px;
+padding-bottom: 60px;
+width: 100%;
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-end;
+flex-wrap: wrap;
+flex-basis: 100%;
+}
+
+/*      navPagination     */
+
+/* -Украшательство- */
+
+#navPagination {
+position: absolute;
+}
+
+.button {
+font-family: 'EB Garamond', serif;
+font-size: 10pt;/*14pt;*/
+text-align: right;
+flex-grow: 0;
+cursor: pointer;
+z-index: 1000;
+}
+
+input[name^="shadow-"] {
+display: none;
+}
+
+/* --кнопка выбрана-- */
+input[name^="shadow-"]:checked + .button {
+    font-size: 40pt;/*48pt;*/
+}
+
+#shadow-slide1:checked + .SlideKey1::after,
+#shadow-slide2:checked + .SlideKey2::before,
+#shadow-slide2:checked + .SlideKey2::after,
+#shadow-slide3:checked + .SlideKey3::before,
+#shadow-slide3:checked + .SlideKey3::after,
+#shadow-slide4:checked + .SlideKey4::before
+{
+  content: "";
+  display: block;
+  width: calc(100% - 10px);
+  height: 10vh;
+  margin: 3.6vh 0;
+  border-right: solid black 1px;
+}
+/* --//кнопка выбрана-- */
+
+/* -//Украшательство- */
+
+/* -Функционал- */
+
+input[name^="shadow-"]:checked + .SlideKey1 ~ #slider .SlideBox1,
+input[name^="shadow-"]:checked + .SlideKey2 ~ #slider .SlideBox2,
+input[name^="shadow-"]:checked + .SlideKey3 ~ #slider .SlideBox3,
+input[name^="shadow-"]:checked + .SlideKey4 ~ #slider .SlideBox4 {
+display: block;
+opacity: 1;
+}
+
+/* -//Функционал- */
+
+/*      //navPagination     */
+
+/*    slider    */
+
+#slider {
+/*
+position: relative;
+box-sizing: border-box;
+padding-left: 59px;
+padding-right: 60px;
+padding-top: 47px;
+padding-bottom: 60px;
+width: 100%;
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-end;
+flex-wrap: wrap;
+flex-basis: 100%;
+*/
+display: block;
+margin: 0;
+padding: 0;
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0;
+left: 0;
+}
+
+#slider .element {
+flex: none;
+position: absolute;
+width: 100%;
+height: 100%;
+display: none;
+z-index: 3;
+}
+
+
+/*    //slider    */
+/*   -SlideBox1-    */
+
+.SlideBox1 > .bg1,
+.SlideBox1 > .bg2 {
+display: inline-block;
+float: left;
+height: 100%;
+width: 50%;
+margin: 0;
+padding: 0;
+z-index: 1;
+}
+
+.SlideBox1 > .bg1 {
+background-color: #fff;
+}
+
+.SlideBox1 > .bg2 {
+background-color: rgb(236, 222, 222);
+background-image: url("imgs/01/Rectangle 3.png");
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: local;
+background-size: contain;
+}
+
+.SlideBox1 > .Nature_Line {
+display: block;
+font-size: 56pt; /*136pt in orig*/
+font-family: "Adobe Garamond Pro";
+position: absolute;
+margin: 0;
+left: calc(59px + 3% );
+bottom: 66.6%;
+}
+
+.SlideBox1 > .text {
+text-align: left;
+position: absolute;
+max-width: 35%;
+max-height: 54%;/*
+overflow-y: auto;
+overflow-x: visible;*/
+overflow: visible;
+width: 210px;
+right: 55%;
+bottom: calc(60px + 3.7% );
+z-index: 1020;
+}
+
+.SlideBox1 > .text > .decorLine1_1 {
+width: 128%;
+border-top: 1px solid black
+}
+
+.SlideBox1 > .text > article {
+font-size: 11pt;/*14pt in orig*/
+font-family: "Adobe Garamond Pro";
+z-index: 1030;
+}
+
+.SlideBox1 > .photo {
+display: flex;
+box-sizing: border-box;
+position: absolute;
+align-content: center;
+align-items: center;
+margin: 0;
+padding-top: 47px;
+padding-bottom: 60px;
+padding-left: 9.9%;
+max-width: 38%;
+top:0;
+left: 50%;
+height: 100%;
+z-index: 5;
+}
+.SlideBox1 > .photo > img {
+align-self: center;
+}
+
+img {
+max-width: 100%;
+}
+
+/*   //-SlideBox1-    */
+
+/*   -SlideBox2-    */
+
+.SlideBox2 > .bg1,
+.SlideBox2 > .bg2 {
+display: inline-block;
+float: left;
+height: 100%;
+width: 50%;
+margin: 0;
+padding: 0;
+z-index: 1;
+}
+
+.SlideBox2 > .bg2 {
+background-color: #fff;
+}
+
+.SlideBox2 > .bg1 {
+background-color: rgb(229, 234, 235);/*
+background-image: url("imgs/02/Rectangle3.png");
+background-position: right;
+background-repeat: no-repeat;
+background-size: cover;*/
+}
+
+.SlideBox2 > .photo {
+display: flex;
+box-sizing: border-box;
+position: absolute;
+align-content:  flex-start;
+align-items: flex-start;
+margin: 0;
+padding-top: 0;
+z-index: 5;
+top:0;
+height: 75%;
+padding-left: 6.9%;
+left: 59px;
+max-width: 32%;
+/*
+padding-bottom: 60px;
+*/
+}
+.SlideBox2 > .photo > img {
+display: block;
+padding-top: 76px;
+background-color: rgb(236, 222, 222);
+}
+
+.SlideBox2 > .ladder {
+display: block;
+font-size: 56pt; /*136pt in orig*/
+font-family: "Adobe Garamond Pro";
+position: absolute;
+margin: 0;
+text-align: center;
+z-index: 160;
+line-height: 1em;
+left: 50%;
+margin-right: -50%;
+transform: translateX(-58.6%);
+bottom: calc(60px + 8% );
+max-height: 57%;
+}
+
+/*   //-SlideBox2-    */
+
+/*   -SlideBox3-    */
+
+.SlideBox3 > .bg1,
+.SlideBox3 > .bg2 {
+display: inline-block;
+float: left;
+height: 100%;
+width: 50%;
+margin: 0;
+padding: 0;
+z-index: 1;
+}
+
+.SlideBox3 > .bg1 {
+background-color: #fff;
+}
+
+.SlideBox3 > .bg2 {
+background-color: rgb(236, 222, 222);
+}
+
+.SlideBox3 > .photo {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-content: center;
+align-items: center;
+position: absolute;
+height: 100%;
+width: 50%;
+}
+
+.SlideBox3 > .photo > img {
+max-width: 33%;
+}
+
+.SlideBox3 > .photo > p {
+font-size: 11pt; /*14pt in orig*/
+font-family: "Adobe Garamond Pro";
+max-width: 33%;
+text-align: left;
+}
+
+.SlideBox3 > .wrap1 {
+box-sizing: border-box;
+display: flex;
+align-items: center;
+justify-content: center;
+position: absolute;
+height: 100%;
+max-height: 100%;
+max-width: 50%;
+width: 50%;
+left: 50%;
+margin: 0;
+padding: 0;
+padding-top: calc(47px + 3.7% );
+padding-bottom: 5.5%;
+z-index: 1;
+background-image: url("imgs/03/Rectangle 3.png");
+background-size:  contain;
+background-origin: content-box;
+background-position: bottom;
+background-repeat: no-repeat;
+background-clip: padding-box;
+}
+
+.SlideBox3 > .wrap1 .wrap2 {
+display: flex;
+flex-direction: column;
+align-items: center;
+align-content: center;
+justify-content: center;/*
+flex-basis: 30.7%;*/
+position: relative;
+flex-grow: 0;
+margin: 0;
+padding: 0;
+height: 100%;
+}
+
+.SlideBox3 > .wrap1  p {
+margin: 0;
+padding: 0;/*
+padding-top: 20px;*/
+display: block;
+font-size: 11pt; /*14pt in orig*/
+font-family: "Adobe Garamond Pro";
+}
+
+.SlideBox3 > .wrap1 .decorLine3_1 {
+margin: 35px 0;
+flex-grow: 1;
+width: 1px;
+border-left: 1px solid black;
+}
+
+.SlideBox3 > .wrap1 article {
+margin: 0;
+padding: 0;
+display: block;
+font-size: 35px; /*48px;*/
+max-width: 42%;
+font-family: "Adobe Garamond Pro";
+font-style: italic;
+line-height: 1.25;
+text-align: center;
+}
+
+.SlideBox3 > .wrap1 a {
+font-family: "Adobe Garamond Pro";
+color: black;
+font-size: 17pt;
+z-index: 5000;
+}
+
+.SlideBox3 > .wrap1 a::after {
+font-family: "Adobe Garamond Pro";
+color: black;
+content: " +";
+font-size: 17pt;
+text-decoration: none;
+}
+
+/*   //-SlideBox3-    */
+
+/*   -SlideBox4-    */
+
+.SlideBox4 > .bg1,
+.SlideBox4 > .bg2 {
+width: 100%;
+margin: 0;
+padding: 0;
+z-index: 1;
+}
+
+.SlideBox4 > .bg1 {
+background-color: rgb(220, 231, 233);
+height: 75%;
+background-image: url("imgs/04/Rectangle 3.png");
+background-repeat: no-repeat;
+background-position: top;
+background-size: auto 133.3%;
+}
+
+.SlideBox4 > .bg2 {
+background-color: #fff;
+height: 25%;
+}
+
+.SlideBox4 > .wrap1 {
+box-sizing: border-box;
+align-items: center;
+align-content: center;
+justify-content: space-between;
+position: absolute;
+display: flex;
+flex-direction: row;
+z-index: 4;
+margin: 0;
+padding: 0;
+top: 0;
+left: 20%;
+width: 60%;
+height: 100%;
+}
+
+.SlideBox4 > .wrap1 > p {
+display: inline-block;
+margin: 0;
+padding: 24pt 12px 0;
+font-family: "Adobe Garamond Pro";
+font-size: 16pt;/*24pt*/
+box-sizing: content-box;
+width: 135px;
+}
+.SlideBox4 > .wrap1 > img {
+padding-top: 5%;
+display: inline-block;
+max-width: 40%;
+}
+
+.SlideBox4 > .nextColl {
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: flex-end;
+position: absolute;
+width: 350px;
+max-width: 25%;
+bottom: 0;
+margin-bottom: 21px;
+right: 0;
+}
+
+.SlideBox4 > .nextColl > a {
+font-family: "Adobe Garamond Pro";
+position: relative;
+white-space: nowrap;
+font-size: 35px;/*48pt*/
+text-decoration: none;
+color: #000;
+cursor: pointer;
+z-index: 10000;
+}
+.SlideBox4 > .nextColl > .decorLine4_1 {
+display: inline-block;
+flex-grow: 1;
+position: relative;
+border-top: 1px solid #000;
+min-width: 10px;
+}
+
+/*   //-SlideBox4-    */
+/*       //$pages$        */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+@font-face {
+    font-family: 'AGaramondPro';
+    font-style: normal;
+    src: url('assets/AGaramondPro-Regular.otf'); /* Путь к файлу со шрифтом */
+}
+/*
+@font-face {
+    font-family: 'AGaramondPro-Italic';
+    font-style: italic;
+    src: url('assets/AGaramondPro-Italic.otf'); /* Путь к файлу со шрифтом */
+}
