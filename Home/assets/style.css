@@ -1,7 +1,8 @@
 body {
     margin: 0;    
     font-size: 15px;
-    
+    display: flex;
+    justify-content: space-between;
     color: #333;
 }
 
@@ -172,19 +173,14 @@ body {
 }
 
 
-.firstCol {
+.image {
     display: flex;
     z-index: 1;
-    margin: 20px 80px;
+    margin: 20px 50px;
     max-width: 170px;
 }
 
-.secondCol {
-    display: flex;
-    z-index: 1;
-    margin: 20px 80px;
-    max-width: 170px;
-}
+
 
 .bottomCol {
     display: flex;
@@ -196,23 +192,19 @@ body {
     margin: auto;
 }
 
-.thirdCol {
-    display: flex;
-    z-index: 1;
-    margin: 20px 80px;
-    max-width: 170px;
-}
 
-.fourthCol {
-    display: flex;
-    z-index: 1;
-    margin: 20px 80px;
-    max-width: 170px;
-}
 
 .list {
-    margin: 20px 80px;
-}
+    margin: 0 80px auto;
+    display: flex;
+    flex-direction: row;
+    }
+.list2 {
+    margin: auto 80px 0;
+    display: flex;
+    flex-direction: row;
+    }
+
 
 .imageBlock {
     display: flex;
@@ -221,6 +213,94 @@ body {
     width: 670px;
 }
 
+.collN {
+    font-family: 'AGaramondPro';
+    font-size: 14px;
+    font-weight: normal;
+    color: #d0d0d0;
+    margin: auto 40px;
+    
+}
+
+.collName {
+    font-family: 'AGaramondPro';
+    font-size: 14px;
+    font-weight: normal;
+    color: #000;
+    margin: auto 40px;
+    
+}
+
+.arrows {
+    font-family: 'AGaramondPro';
+    font-size: 14px;
+    font-weight: normal;
+    color: #d0d0d0;
+    margin: auto 80px;
+    
+}
+
+.coll {
+    display: flex;
+    font-family: 'AGaramondPro';
+    font-size: 14px;
+    font-weight: normal;
+    color: #d0d0d0;
+    margin: 40px 0;
+    position: absolute;
+    z-index: 3;
+    transform: rotate(-90deg);
+
+}
+
+.collectionsEnvironment {
+    display: flex;
+    flex-direction: row;
+    margin: 0 40px;
+    position: relative;
+}
+
+.Name {
+    font-family: 'AGaramondPro';
+    font-size: 18px;
+    font-weight: normal;
+    color: #000;
+    margin: auto;
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    z-index: 4;
+}
+
+.arrow {
+    font-family: 'AGaramondPro';
+    font-size: 14px;
+    font-weight: normal;
+    color: #d0d0d0;
+    margin: auto;
+    bottom: 5px;
+    left: 20px;
+    position: absolute;
+}
+
+.links {
+    font-family: 'AGaramondPro';
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+    transform: rotate(-90deg);
+    position: absolute;
+    bottom:  150px;
+    left: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 400px;
+}
+
+.navigation {
+    margin: 30px 10px;
+}
 
 }
 @font-face {
