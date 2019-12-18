@@ -18,6 +18,7 @@ box-sizing: border-box;
 }
 
 body {
+overflow: hidden;
 box-sizing: content-box;
 position: absolute;
 margin: 0px;
@@ -397,10 +398,9 @@ background-color: #fff;
 .SlideBox2 > .bg1 {
 background-color: rgb(229, 234, 235);/*
 background-image: url("imgs/02/Rectangle3.png");
-background-position: center;
+background-position: right;
 background-repeat: no-repeat;
-background-attachment: local;
-background-size: contain;*/
+background-size: cover;*/
 }
 
 .SlideBox2 > .photo {
@@ -446,6 +446,129 @@ max-height: 57%;
 /*   //-SlideBox2-    */
 
 /*   -SlideBox3-    */
+
+.SlideBox3 > .bg1,
+.SlideBox3 > .bg2 {
+display: inline-block;
+float: left;
+height: 100%;
+width: 50%;
+margin: 0;
+padding: 0;
+z-index: 1;
+}
+
+.SlideBox3 > .bg1 {
+background-color: #fff;
+}
+
+.SlideBox3 > .bg2 {
+background-color: rgb(236, 222, 222);
+}
+
+.SlideBox3 > .photo {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-content: center;
+align-items: center;
+position: absolute;
+height: 100%;
+width: 50%;
+}
+
+.SlideBox3 > .photo > img {
+max-width: 33%;
+}
+
+.SlideBox3 > .photo > p {
+font-size: 11pt; /*14pt in orig*/
+font-family: "Adobe Garamond Pro";
+max-width: 33%;
+text-align: left;
+}
+
+.SlideBox3 > .wrap1 {
+box-sizing: border-box;
+display: flex;
+align-items: center;
+justify-content: center;
+position: absolute;
+height: 100%;
+max-height: 100%;
+max-width: 50%;
+width: 50%;
+left: 50%;
+margin: 0;
+padding: 0;
+padding-top: calc(47px + 3.7% );
+padding-bottom: 5.5%;
+z-index: 1;
+background-image: url("imgs/03/Rectangle 3.png");
+background-size:  auto;
+background-origin: content-box;
+background-position: bottom;
+background-repeat: no-repeat;/*
+background-clip: padding-box;*/
+}
+
+.SlideBox3 > .wrap1 .wrap2 {
+display: flex;
+flex-direction: column;
+align-items: center;
+align-content: center;
+justify-content: center;/*
+flex-basis: 30.7%;*/
+position: relative;
+flex-grow: 0;
+margin: 0;
+padding: 0;
+height: 100%;
+}
+
+.SlideBox3 > .wrap1  p {
+margin: 0;
+padding: 0;/*
+padding-top: 20px;*/
+display: block;
+font-size: 11pt; /*14pt in orig*/
+font-family: "Adobe Garamond Pro";
+}
+
+.SlideBox3 > .wrap1 .decorLine3_1 {
+margin: 35px 0;
+flex-grow: 1;
+width: 1px;
+border-left: 1px solid black;
+}
+
+.SlideBox3 > .wrap1 article {
+margin: 0;
+padding: 0;
+display: block;
+font-size: 35px; /*48px;*/
+max-width: 42%;
+font-family: "Adobe Garamond Pro";
+font-style: italic;
+line-height: 1.25;
+text-align: center;
+}
+
+.SlideBox3 > .wrap1 a {
+font-family: "Adobe Garamond Pro";
+color: black;
+font-size: 17pt;
+z-index: 5000;
+}
+
+.SlideBox3 > .wrap1 a::after {
+font-family: "Adobe Garamond Pro";
+color: black;
+content: " +";
+font-size: 17pt;
+text-decoration: none;
+}
+
 /*   //-SlideBox3-    */
 
 /*   -SlideBox4-    */
